@@ -1,0 +1,10 @@
+mixin product-card-other(imgsrc, price, priceold, name)
+  .catalog__item.catalog__item_other
+    a.catalog__img(href="")
+      img(src="./img/" + imgsrc, alt="")
+    a.catalog__name(href="")= name
+    .catalog__prices
+      .catalog__price= price
+      .catalog__price-old= priceold
+    .catalog__buttons
+      a.button.button_full(href="") Добавить в заказ

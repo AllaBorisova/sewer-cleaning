@@ -1,0 +1,17 @@
+mixin product-card(imgsrc, option1, option2, price, priceold, name)
+  .catalog__item.catalog__item_new
+    a.catalog__img(href="")
+      img(src="./img/" + imgsrc, alt="")
+    a.catalog__name(href="")= name
+    .catalog__options
+      .catalog__option
+        .catalog__option-name МОЩНОСТЬ ОБОРУДОВАНИЯ
+        .catalog__option-value= option1
+      .catalog__option
+        .catalog__option-name ОТАПЛИВАЕМАЯ ПЛОЩАДЬ
+        .catalog__option-value= option2
+    .catalog__prices
+      .catalog__price= price
+      .catalog__price-old= priceold
+    .catalog__buttons
+      a.button.button_full(href="") Смотреть подробнее

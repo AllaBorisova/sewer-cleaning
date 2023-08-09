@@ -1,0 +1,132 @@
+.header {
+  position: relative;
+  z-index: 2;
+  &__top {
+    padding: 2.5rem 0;
+    @media (max-width: 767px) {
+      padding: 1.5rem 0;
+    }
+  }
+  .logo {
+    font-size: 3.5rem;
+    font-weight: bold;
+    font-family: $font;
+    color: $color-primary;
+  }
+  .container_flex {
+    gap: 4rem;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 992px) {
+      justify-content: space-between;
+    }
+    @media (max-width: 767px) {
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: space-around;
+    }
+  }
+  @media (max-width: 992px) {
+    .menu {
+      display: none;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    @media (max-width: 992px) {
+      margin-left: auto;
+    }
+    @media (max-width: 767px) {
+      gap: 1rem;
+    }
+  }
+  &__phone {
+    color: $color-text;
+    display: block;
+    font-size: 2.5rem;
+    line-height: 2.7rem;
+    padding-left: 4rem;
+    background: url(../img/phone-call.png) left center no-repeat;
+    background-size: 2.6rem;
+    @media (max-width: 992px) {
+      font-size: 0px;
+    }
+  }
+  &__whatsapp {
+    color: $color-text;
+    display: block;
+    font-size: 2.5rem;
+    line-height: 2.7rem;
+    padding-left: 4rem;
+    background: url(../img/whatsapp.png) left center no-repeat;
+    background-size: 2.6rem;
+    @media (max-width: 992px) {
+      font-size: 0px;
+    }
+  }
+  &.open-menu {
+    position: relative;
+    .menu {
+      display: block;
+      background: #fff;
+      position: absolute;
+      right: 2rem;
+      width: 50vw;
+      padding: 2rem;
+      top: 10.7rem;
+      border: 1px solid #e2e4e6;
+      color: #000;
+      ul {
+        flex-direction: column;
+      }
+    }
+  }
+  .hamburger {
+    display: none;
+    @media (max-width: 992px) {
+      display: block;
+      padding: 0px;
+    }
+  }
+}
+.menu {
+  border-top: 1px solid $color-border;
+  ul {
+    @include ulClean;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+    @media (max-width: 1200px) {
+      gap: 2rem;
+    }
+    a {
+      font-size: 2rem;
+      line-height: 1em;
+      display: block;
+      padding: 1.7rem 0;
+      text-transform: uppercase;
+      position: relative;
+      &:after {
+        content: "";
+        width: 100%;
+        position: absolute;
+        height: 3px;
+        width: 0px;
+        bottom: -3px;
+        left: 0px;
+        @include tr;
+        background: $color-primary;
+      }
+      &:hover,
+      &.active {
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

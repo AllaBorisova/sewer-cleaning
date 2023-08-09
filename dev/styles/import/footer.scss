@@ -1,0 +1,86 @@
+.footer {
+  .container_grid {
+    grid-template-columns: 1fr 1fr;
+    @media (max-width: 992px) {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+    @media (max-width: 480px) {
+    }
+  }
+  &__top {
+    position: relative;
+    z-index: 3;
+  }
+  &__info {
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+  }
+  &__contacts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    margin-bottom: 5rem;
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    &-phone {
+      background: url(../img/phone-call.png) left center no-repeat;
+      padding-left: 4.3rem;
+      background-size: 2.6rem;
+    }
+    &-whatsapp {
+      background: url(../img/whatsapp.png) left center no-repeat;
+      padding-left: 4.3rem;
+      background-size: 2.6rem;
+    }
+    &-address {
+      background: url(../img/pin.png) left center no-repeat;
+      padding-left: 4.3rem;
+      background-size: 2.1rem;
+    }
+  }
+  &__socials {
+    display: flex;
+    gap: 1.5rem;
+  }
+  &__map {
+    height: 45.9rem;
+    background: url(../img/map.jpg) center no-repeat;
+    background-size: cover;
+    margin-top: -21.2rem;
+    position: relative;
+    z-index: 2;
+  }
+  &__bottom {
+    padding: 1.7rem 0;
+    background: $color-footer-bg;
+    font-size: 1.8rem;
+    color: $color-footer-text;
+    @media (max-width: 767px) {
+      font-size: 1.4rem;
+    }
+    .container_flex {
+      justify-content: space-between;
+      align-items: center;
+      gap: 4rem;
+      @media (max-width: 992px) {
+        gap: 1rem;
+        flex-direction: column;
+      }
+      @media (max-width: 767px) {
+        gap: 0.5rem;
+      }
+    }
+    a {
+      color: $color-footer-text;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
